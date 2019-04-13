@@ -89,7 +89,7 @@ $(document).ready(function () {
 $(window).on('scroll', function () {
     var scrollDistance = $(window).scrollTop();
 
-    $('header').each(function (i) {
+    $('header .menu').each(function (i) {
         if ($(this).position().top <= scrollDistance) {
             $('li.active').removeClass('active');
             $('li').eq(i).addClass('active');
