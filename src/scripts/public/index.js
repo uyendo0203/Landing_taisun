@@ -53,7 +53,7 @@ $(document).ready(function () {
     // SLIDER===========================================================================
 
     // HEADER CLICK AND SCROLL===========================================================================
-    $('header li a').click(function () {
+    $('header .menu li a').click(function () {
         if ($(this).hasClass('active')) {
             $(this).removeClass('active')
         } else {
@@ -68,7 +68,7 @@ $(document).ready(function () {
     }
 
 
-    $("header li a").click(function (e) {
+    $("header .menu li a").click(function (e) {
         // Prevent a page reload when a link is pressed
         e.preventDefault();
         // Call the scroll function
