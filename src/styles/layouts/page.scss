@@ -239,8 +239,13 @@ $color-blue : #00afef;
                 width: 50%;
                 text-align: center;
                 margin-bottom: 50px;
-                height: 400px;
+                // height: 400px;
+                height: 20.833vw;
                 position: relative;
+
+                @media(max-width: 992px) {
+                    height: 375px;
+                }
                 &:nth-child(1){
                     // max-width: 450px;
                     @media(max-width: 992px) {
@@ -248,8 +253,10 @@ $color-blue : #00afef;
                     }
                 }
                 &:nth-child(2){
+                   
                     .img{
-                        max-width: 380px;
+                        // max-width: 380px;
+                        max-width: 19.792vw;
                         top: 0;
                     }
                 }
@@ -264,7 +271,8 @@ $color-blue : #00afef;
                         height: 230px;
                     }
                     .img{
-                        max-width: 600px
+                        // max-width: 600px
+                        max-width: 31.250vw
                     }
                 }
                 @media(max-width: 991px) {
@@ -274,7 +282,8 @@ $color-blue : #00afef;
                 .img{
                     width: 100%;
                     position: absolute;
-                    max-width: 500px;
+                    // max-width: 500px;
+                    max-width: 26.042vw;
                     bottom: 0;
                     left: 50%;
                     transform: translateX(-50%);
@@ -415,9 +424,9 @@ $color-blue : #00afef;
             font-family: 'Gotham-Book';
             padding-top: 20px;
             padding-bottom: 23px;
-            @media(max-width: 1440px) {
-                max-width: 53%;
-            }
+            // @media(max-width: 1440px) {
+            //     max-width: 53%;
+            // }
             @media(max-width: 992px) {
                 max-width: 100%;
             }
@@ -489,10 +498,16 @@ $color-blue : #00afef;
         -webkit-filter: drop-shadow( -3px 32px 15px #0000007a  );
         filter: drop-shadow( -3px 32px 15px #0000007a );
 		.button-info{
-			transform: translateY(-150px);	
-			-moz-transform: translateY(-150px);	
-			-o-transform: translateY(-150px);	
-            -webkit-transform: translateY(-150px);	
+			transform: translateY(-7.813vw);	
+			-moz-transform: translateY(-7.813vw);	
+			-o-transform: translateY(-7.813vw);	
+            -webkit-transform: translateY(-7.813vw);	
+            @media(max-width: 1400px) {
+                transform: translateY(-45px);	
+                -moz-transform: translateY(-45px);	
+                -o-transform: translateY(-45px);	
+                -webkit-transform: translateY(-45px);
+            }
             @media(max-width:992px) {
                 transform: translateY(-90px);	
                 -moz-transform: translateY(-90px);	
@@ -510,8 +525,12 @@ $color-blue : #00afef;
             margin-bottom: 30px;
         }
         form{
-            padding-top: 100px;
+            padding-top: 5.208vw;
+            // padding-top: 100px;
             padding-bottom: 130px;
+            @media(max-width: 1400px) {
+                padding-top: 0
+            }
             @media(max-width:992px) {
                 padding-top: 50px;
                 padding-bottom: 50px;
@@ -526,10 +545,7 @@ $color-blue : #00afef;
                 color:#000;
                 padding-left: 13px;
                 padding-bottom: 15px;
-                @media(max-width: 768px) {
-                    padding-bottom: 0;
-                }
-                @media(max-width: 480px) {
+                @media(max-width: 1400px) {
                     padding-bottom: 0;
                 }
             }
@@ -540,8 +556,8 @@ $color-blue : #00afef;
                 height: 75px;
                 font-size: 18px;
                 box-shadow: none;
-                @media(max-width: 480px) {
-                    height: 60px;;
+                @media(max-width: 1400px) {
+                    height: 50px;
                 }
             }
             .submit-button{
@@ -573,6 +589,10 @@ $color-blue : #00afef;
             border-radius: 50px;
             outline: none;
             border: none;
+            @media(max-width: 1400px) {
+                height: 50px;
+                font-size: 25px
+            }
             @media(max-width:992px) {
                margin: 0 auto;
                font-size: 30px;
@@ -582,10 +602,12 @@ $color-blue : #00afef;
     }
     .section4{
         background-image: url('../assets/images/bg-4.jpg');
-        padding-top: 200px;
+        padding-top: 10.417vw;
+        // padding-top: 200px;
         padding-left: 7.969vw;
         padding-right: 7.969vw;
-        padding-bottom: 185px;
+        padding-bottom: 9.635vw;
+        // padding-bottom: 185px;
         background-size: 100% 100%;
         
         @media(max-width:992px) {
@@ -804,13 +826,20 @@ $color-blue : #00afef;
    
     #success{
         
-        @media (min-width: 768px){
-            .modal-dialog {
-                max-width: 1200px;
-                margin: 50px auto;
-                width: 100%;
+        .modal-dialog {
+            // max-width: 1200px;
+            max-width: 62.500vw;
+            margin: 50px auto;
+            width: 100%;
+            @media (max-width: 1400px){
+                margin: 20px auto;
+            }
+            @media (max-width: 768px){
+                max-width: 90%;
             }
         }
+
+        
         .modal-body{
             padding-bottom: 60px;
             @media (min-width: 768px){
@@ -822,14 +851,16 @@ $color-blue : #00afef;
                 margin: 0 auto;
             }
             .text-1{
-                font-size: 35px;
+                // font-size: 35px;
+                font-size: 1.823vw;
                 font-family: 'Gotham-Book';
                 @media(max-width:992px) {
                     font-size: 20px;
                 }
             }
             .text-2{
-                font-size: 42px;
+                // font-size: 42px;
+                font-size: 2.188vw;
                 color:#9b6f1f;
                 font-family: 'Gotham-Black';
                 text-transform: uppercase;
@@ -838,7 +869,8 @@ $color-blue : #00afef;
                 }
             }
             .text-3{
-                font-size: 36px;
+                // font-size: 36px;
+                font-size: 1.875vw;
                 font-family: 'Gotham-Book';
                 @media(max-width:992px) {
                     font-size: 20px;
@@ -874,10 +906,15 @@ $color-blue : #00afef;
         }
         .pull-images{
             margin-top: 50px;
+            @media(max-width:1400px) {
+                margin-top: 20px;
+            }
             .wrap{
                 width: 100%;
-                max-width: 290px;
-                height: 290px;
+                // max-width: 290px;
+                max-width: 15.104vw;
+                // height: 290px;
+                height: 15.104vw;
                 margin: 0 auto;
                 border: 2px #828282 dashed;
                 border-radius: 45px;
@@ -897,6 +934,7 @@ $color-blue : #00afef;
                 position: absolute;
                 top: 0;
                 opacity: 0;
+                width: 100%;
             }
             .img{
                 width: 100%;
@@ -917,10 +955,14 @@ $color-blue : #00afef;
             margin-top: 10px;
         }
         .share{
-            max-width: 360px;
+            // max-width: 360px;
+            max-width: 18.750vw;
             margin: 0 auto;
             padding-top: 50px;
             cursor: pointer;
+            @media(max-width:1400px) {
+                padding-top: 20px;
+            }
             @media(max-width:992px) {
                 max-width: 310px;
                 padding-top: 25px;
@@ -931,18 +973,28 @@ $color-blue : #00afef;
             }
         }
         .result{
-            max-width: 250px;
+            // max-width: 250px;
+            max-width: 13.021vw;
             margin: 0 auto;
             margin-bottom: 13px;
             position: relative;
             overflow: hidden;
-            height: 170px;
+            // height: 170px;
+            height: 8.854vw;
             img{
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%,-50%);
             }
+            
+            @media(max-width:992px) {
+                max-width: 200px;
+                height: 140px;
+            }
+
+
+            
         }   
         #blah{
             width: 100%;
@@ -950,7 +1002,8 @@ $color-blue : #00afef;
         }
         #blah-fake{
             width: 100%;
-            max-width: 250px;;
+            // max-width: 250px;;
+            max-width: 13.021vw;;
             @media(max-width:992px) {
                 max-width: 200px;
             }

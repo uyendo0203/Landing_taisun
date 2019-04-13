@@ -140,26 +140,26 @@ $('.list-client .tab .title').click(function(){
     $(this).closest('.tab').toggleClass('show')
 })
 
-function readURL(input) {
+// function readURL(input) {
 
-    if (input.files && input.files[0]) {
-      var reader = new FileReader();
+//     if (input.files && input.files[0]) {
+//       var reader = new FileReader();
   
-      reader.onload = function(e) {
-        $('#blah').attr('src', e.target.result);
-        // $('#blah').css('max-width','170px')
-      }
+//       reader.onload = function(e) {
+//         $('#blah').attr('src', e.target.result);
+//         // $('#blah').css('max-width','170px')
+//       }
   
-      reader.readAsDataURL(input.files[0]);
-    }
-}
+//       reader.readAsDataURL(input.files[0]);
+//     }
+// }
 
 
-// $('#blah').hide() ;
-$('#imageFile').on("change", function(){ 
-    if(this){
-        readURL(this);
-    }
+// // $('#blah').hide() ;
+// $('#imageFile').on("change", function(){ 
+//     if(this){
+//         readURL(this);
+//     }
     
- });
+//  });
 
