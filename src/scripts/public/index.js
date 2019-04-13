@@ -46,21 +46,6 @@
 $('.is_loading').css('opacity','1')
 
 $(document).ready(function () {
-    
-
-    // LOADING OFF WHEN HTML DONE================================================================================
-    $('body').css('overflow','hidden')
-    setTimeout(() => {
-        $('.is_loading').css({
-            'opacity': '0',
-            'z-index':'-1'
-        });
-        $('body').css('overflow', 'auto')
-    }, 3000);
-    // END LOADING===========================================================================
-
-
-
 
     // AMINATION===========================================================================
     // AOS.init();
@@ -150,70 +135,31 @@ $('body').click(function(e){
 })
 
 
+$('.list-client .tab .title').click(function(){
+    $('.list-client .tab').removeClass('show')
+    $(this).closest('.tab').toggleClass('show')
+})
 
-// INIT SLIDER FUNCTION===========================================================================
+function readURL(input) {
 
-$('.slider-section-1').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-    fade: true,  
-    autoplay:true,
-    speed:3000,  
-    prevArrow:"<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
-    nextArrow:"<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>"
-});
-$('.slider-section-5').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-    fade: true,  
-    autoplay:true,
-    speed:3000,  
-    prevArrow:"<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
-    nextArrow:"<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>"
-});
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+  
+      reader.onload = function(e) {
+        $('#blah').attr('src', e.target.result);
+        // $('#blah').css('max-width','170px')
+      }
+  
+      reader.readAsDataURL(input.files[0]);
+    }
+}
 
 
-$('.slider-for').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    speed:3000,  
-    fade: true,
-    asNavFor: '.slider-nav'
-});
-$('.slider-nav').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    asNavFor: '.slider-for',
-    dots: false,
-    speed:3000,  
-    centerMode: false,
-    focusOnSelect: true,
-    arrows: true,
-    prevArrow:"<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
-    nextArrow:"<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>",
-    responsive: [
-       
-        {
-          breakpoint: 992,
-          settings: {
-            dots: false,
-            arrows:false
-          }
-        }
-      ]
-});
-
-$(".popup img").click(function () {
-    var $src = $(this).attr("src");
-    $(".show-image").fadeIn();
-    // $(".img-show img").attr("src", $src);
-});
-
-$("span, .overlay").click(function () {
-    $(".show-image").fadeOut();
-});
-
+// $('#blah').hide() ;
+$('#imageFile').on("change", function(){ 
+    if(this){
+        readURL(this);
+    }
+    
+ });
 
