@@ -193,14 +193,18 @@ $color-blue : #00afef;
             height: 100vh;
             overflow: hidden;
             border-bottom: 8px solid #b7882e;
+            @media(max-width:1310px) {
+               height: auto;
+            }
             img{
                 width: 100%;
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
-                -moz-transform: translateY(-50%);
-                -webkit-transform: translateY(-50%);
-                -o-transform: translateY(-50%);
+                @media(max-width: 1310px) {
+                    position: static;
+                    transform: none
+                }
             }
         }
     }
@@ -215,24 +219,31 @@ $color-blue : #00afef;
         }
 		.image-voucher{
 			max-width: 44vw;
-			margin: 0 auto;
-			transform: translateY(-110px);
-			-moz-transform: translateY(-110px);
-			-webkit-transform: translateY(-110px);
-            -o-transform: translateY(-110px);
+            margin: 0 auto;
+            padding-top: 30px;
+			transform: translateY(0);
+			-moz-transform: translateY(0);
+			-webkit-transform: translateY(0);
+            -o-transform: translateY(0);
+            padding-bottom: 50px;
+            
             @media(max-width: 992px) {
-                transform: translateY(-60px);
-                -moz-transform: translateY(-60px);
-                -webkit-transform: translateY(-60px);
-                -o-transform: translateY(-60px);
-                max-width: 70vw;
+                max-width: 500px;
             }
-            @media(max-width: 768px) {
-                transform: translateY(-30px);
-                -moz-transform: translateY(-30px);
-                -webkit-transform: translateY(-30px);
-                -o-transform: translateY(-30px);
-            }
+            // -o-transform: translateY(-110px);
+            // @media(max-width: 992px) {
+            //     transform: translateY(-60px);
+            //     -moz-transform: translateY(-60px);
+            //     -webkit-transform: translateY(-60px);
+            //     -o-transform: translateY(-60px);
+            //     max-width: 70vw;
+            // }
+            // @media(max-width: 768px) {
+            //     transform: translateY(-30px);
+            //     -moz-transform: translateY(-30px);
+            //     -webkit-transform: translateY(-30px);
+            //     -o-transform: translateY(-30px);
+            // }
 			img{
 				width: 100%
 			}
@@ -837,15 +848,26 @@ $color-blue : #00afef;
    
     #success{
         .close-icon{
-            height: 25px;
+         
+            height: 40px;
             cursor: pointer;
-            width: 25px;
+            width: 40px;
             position: absolute;
-            right: -26px;
-            top: 3px;
+            right: -33px;
+            top: -16px;
             background: #fff;
             border-radius: 50%;
             padding: 5px;
+
+          
+            @media (max-width: 768px){
+                height: 25px;
+                cursor: pointer;
+                width: 25px;
+                position: absolute;
+                right: -12px;
+                top: -10px;
+            }
             img{
                 width: 100%;
                 vertical-align: top;
